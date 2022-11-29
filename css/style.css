@@ -1,8 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    transition: .5s;
-    /* border: 2px solid red; */
+    transition: 0.5s;
 }
 
 :root{
@@ -14,8 +13,13 @@
     --hover-color: #37c3a8;
     --dark-color: #171717;
 }
-
-
+.btn{
+    border-radius: 50px;
+}
+.btn-color-bg{
+    background-color: var(--primary-color);
+    color: #fff;
+}
 /* Header Area */
 .bottom-border{
     border-bottom: 1px solid #c2c2c2;
@@ -30,7 +34,7 @@
 }
 .social-detail h3{
     font-size: 1rem;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     padding: 0;
     margin: 0;
     color: var(--font-color);
@@ -45,7 +49,6 @@
     text-decoration: none;
     color: #6a6a6a;
 }
-
 
 /* Naver Area  */
 .nav-link{
@@ -67,30 +70,49 @@
 .navbar-text a:hover{
     color: #000;
 }
-
+.login-signup {
+    margin-left: 30px;
+}
+.login-signup a {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    line-height: 0;
+    padding: 8px 15px;
+}
+.login-signup a:hover{
+    background-color: var(--hover-color);
+}
+.login-signup a:first-child {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.login-signup a:last-child {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
 
 /* Banner Area  */
 .banner{
     background: url('../images/banner-bg.jpg') no-repeat;
     background-position: center center;
     background-position: cover;
-    
 }
-.banner-content{
-    height: 95vh;
-    padding: 0 20%;
+.banner-content {
+    min-height: 55vh;
 }
-.banner-content h1{
-    text-align: center;
+.banner-content h1 {
     text-transform: uppercase;
     font-size: 2rem;
+    text-align: left;
 }
 .banner-content p{
     color: #000;
     text-transform: capitalize;
-    text-align: center;
     font-size: 1rem;
-    padding: 0 10%;
+    padding-right: 15%;
+    margin-top: 1rem;
+    text-align: left;
 }
 .banner-content a{
     text-decoration: none;
@@ -268,6 +290,15 @@ span p{
     }
 }
 /* Footer Area */
+footer{
+    background: #1A1A1A;
+    height: 6rem;
+}
+footer p{
+    color: var(--secondary-font-color);
+    margin-bottom:0; 
+    letter-spacing: 2px;
+}
 #footer{
     background: var(--dark-color);
     
@@ -281,11 +312,7 @@ span p{
 .social-item a{
     text-decoration: none;
     color: var(--secondary-font-color);
-}
-.social-item a img{
-    /* padding: 0 10px; */
-
-}
+}   
 #footer .fa-play{
     padding: 0 10px;
     color: var(--primary-color2);
@@ -339,7 +366,6 @@ form input[placeholder="Message"]{
         flex-wrap: wrap;
     }
     .social-address{
-        padding-right: 40%;
-        
+        padding-right: 40%;   
     }
 }
